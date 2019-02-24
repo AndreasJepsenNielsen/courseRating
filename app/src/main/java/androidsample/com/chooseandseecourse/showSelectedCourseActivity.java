@@ -248,26 +248,7 @@ public class showSelectedCourseActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         // Read the state of item position
-
-        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-
-        String tempRating0 = sharedPref.getString("0", "not Rated");
-        String tempRating1 = sharedPref.getString("1", "not Rated");
-        String tempRating2 = sharedPref.getString("2", "not Rated");
-        String tempRating3 = sharedPref.getString("3", "not Rated");
-        String tempRating4 = sharedPref.getString("4", "not Rated");
-        String tempRating5 = sharedPref.getString("5", "not Rated");
-        String tempRating6 = sharedPref.getString("6", "not Rated");
-        String tempRating7 = sharedPref.getString("7", "not Rated");
-
-        courses.get(0).setRating(tempRating0);
-        courses.get(1).setRating(tempRating1);
-        courses.get(2).setRating(tempRating2);
-        courses.get(3).setRating(tempRating3);
-        courses.get(4).setRating(tempRating4);
-        courses.get(5).setRating(tempRating5);
-        courses.get(6).setRating(tempRating6);
-        courses.get(7).setRating(tempRating7);
+        getSharedPreferences();
 
         super.onResume();
         Log.d(TAG,"onResume() called");
