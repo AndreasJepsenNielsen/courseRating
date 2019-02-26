@@ -45,42 +45,42 @@ public class rateACourse extends AppCompatActivity {
         SeekBar seekBar1 = (SeekBar)findViewById(R.id.seekBar);
         seekBar1.setOnSeekBarChangeListener(seekBar1ChangeListener);
         seekBar1Progress = (TextView)findViewById(R.id.textView9);
-        seekBar1Progress.setText("1");
+        seekBar1Progress.setText(getResources().getString(R.string.fifty));
 
         SeekBar seekBar2 = (SeekBar)findViewById(R.id.seekBar2);
         seekBar2.setOnSeekBarChangeListener(seekBar2ChangeListener);
         seekBar2Progress = (TextView)findViewById(R.id.textView21);
-        seekBar2Progress.setText("1");
+        seekBar2Progress.setText(getResources().getString(R.string.fifty));
 
         SeekBar seekBar3 = (SeekBar)findViewById(R.id.seekBar3);
         seekBar3.setOnSeekBarChangeListener(seekBar3ChangeListener);
         seekBar3Progress = (TextView)findViewById(R.id.textView22);
-        seekBar3Progress.setText("1");
+        seekBar3Progress.setText(getResources().getString(R.string.fifty));
 
         SeekBar seekBar4 = (SeekBar)findViewById(R.id.seekBar4);
         seekBar4.setOnSeekBarChangeListener(seekBar4ChangeListener);
         seekBar4Progress = (TextView)findViewById(R.id.textView23);
-        seekBar4Progress.setText("1");
+        seekBar4Progress.setText(getResources().getString(R.string.fifty));
 
         SeekBar seekBar5 = (SeekBar)findViewById(R.id.seekBar5);
         seekBar5.setOnSeekBarChangeListener(seekBar5ChangeListener);
         seekBar5Progress = (TextView)findViewById(R.id.textView24);
-        seekBar5Progress.setText("1");
+        seekBar5Progress.setText(getResources().getString(R.string.fifty));
 
         SeekBar seekBar6 = (SeekBar)findViewById(R.id.seekBar6);
         seekBar6.setOnSeekBarChangeListener(seekBar6ChangeListener);
         seekBar6Progress = (TextView)findViewById(R.id.textView25);
-        seekBar6Progress.setText("1");
+        seekBar6Progress.setText(getResources().getString(R.string.fifty));
 
         SeekBar seekBar7 = (SeekBar)findViewById(R.id.seekBar7);
         seekBar7.setOnSeekBarChangeListener(seekBar7ChangeListener);
         seekBar7Progress = (TextView)findViewById(R.id.textView26);
-        seekBar7Progress.setText("1");
+        seekBar7Progress.setText(getResources().getString(R.string.fifty));
 
         SeekBar seekBar8 = (SeekBar)findViewById(R.id.seekBar8);
         seekBar8.setOnSeekBarChangeListener(seekBar8ChangeListener);
         seekBar8Progress = (TextView)findViewById(R.id.textView20);
-        seekBar8Progress.setText("1");
+        seekBar8Progress.setText(getResources().getString(R.string.fifty));
 
     }
 
