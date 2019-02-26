@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class showSelectedCourseActivity extends AppCompatActivity {
 
-    boolean Rated = false;
+
     static final String TAG = "SELECTEDCOURSEACTIVITY";
     ArrayList<Course> courses = new ArrayList<>();
     TextView textView;
@@ -28,6 +28,10 @@ public class showSelectedCourseActivity extends AppCompatActivity {
         setContentView(R.layout.activity_show_selected_course);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle(null);
+
+
 
         courses.add(0, new Course(1,getResources().getString(R.string.software_construction),""));
         courses.add(1, new Course(2,getResources().getString(R.string.software_design),""));
@@ -123,18 +127,15 @@ public class showSelectedCourseActivity extends AppCompatActivity {
         startActivity(home);
     }
 
-    @Override
-    protected void onDestroy() {
-        getSharedPreferences();
 
-        super.onDestroy();
-        Log.d(TAG,"onDestroy() called");
-
-    }
 
 
     @Override
     protected void onSaveInstanceState(final Bundle outState) {
+
+        outState.putString("name", COURSENAME);
+        outState.putString("rating", textView1.getText().toString());
+
         createSharedPreferences();
 
         super.onSaveInstanceState(outState);
@@ -149,6 +150,10 @@ public class showSelectedCourseActivity extends AppCompatActivity {
 
     @Override
     protected void onRestoreInstanceState(final Bundle savedInstanceState) {
+        textView.setText(savedInstanceState.get("name").toString());
+        textView1.setText(savedInstanceState.get("rating").toString());
+
+
         getSharedPreferences();
 
         super.onRestoreInstanceState(savedInstanceState);
@@ -229,6 +234,15 @@ public class showSelectedCourseActivity extends AppCompatActivity {
 
         super.onStop();
         Log.d(TAG,"onStop() called");
+
+    }
+
+    @Override
+    protected void onDestroy() {
+        getSharedPreferences();
+
+        super.onDestroy();
+        Log.d(TAG,"onDestroy() called");
 
     }
 

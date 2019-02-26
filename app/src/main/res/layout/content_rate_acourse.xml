@@ -29,6 +29,6 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="188dp"
             android:onClick="rateCourse"
-            android:text="Rate" />
+            android:text="@string/rate" />
     </RelativeLayout>
 </android.support.v4.widget.NestedScrollView>

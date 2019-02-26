@@ -30,7 +30,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="188dp"
             android:onClick="rateCourse"
-            android:text="@string/rate"
+            android:text="Rate"
             />
 
         <TextView
@@ -45,10 +45,10 @@
             android:layout_height="24dp"
             android:layout_below="@id/textView9"
             android:layout_marginTop="11dp"
-            android:layout_marginEnd="7dp"
-            android:layout_toStartOf="@id/seekBar"
+            android:layout_marginRight="7dp"
+            android:layout_toLeftOf="@id/seekBar"
             android:gravity="center"
-            android:text="@string/subject_relevance"
+            android:text="Subject Relevance"
             android:textSize="9.5sp" />
 
         <SeekBar
@@ -135,10 +135,10 @@
             android:layout_height="24dp"
             android:layout_below="@id/textView10"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="7dp"
-            android:layout_toStartOf="@id/seekBar2"
+            android:layout_marginRight="7dp"
+            android:layout_toLeftOf="@id/seekBar2"
             android:gravity="center"
-            android:text="@string/teacher_overall_performance"
+            android:text="Teacher Overall Performance"
             android:textSize="9.5sp" />
 
         <TextView
@@ -147,10 +147,10 @@
             android:layout_height="24dp"
             android:layout_below="@id/textView11"
             android:layout_marginTop="26dp"
-            android:layout_marginEnd="7dp"
-            android:layout_toStartOf="@id/seekBar3"
+            android:layout_marginRight="7dp"
+            android:layout_toLeftOf="@id/seekBar3"
             android:gravity="center"
-            android:text="@string/teacher_preperation"
+            android:text="Teacher preperation"
             android:textSize="9.5sp" />
 
         <TextView
@@ -159,10 +159,10 @@
             android:layout_height="24dp"
             android:layout_below="@id/textView12"
             android:layout_marginTop="22dp"
-            android:layout_marginEnd="7dp"
-            android:layout_toStartOf="@id/seekBar4"
+            android:layout_marginRight="7dp"
+            android:layout_toLeftOf="@id/seekBar4"
             android:gravity="center"
-            android:text="@string/amount_of_feedback"
+            android:text="Amount of feedback"
             android:textSize="9.5sp" />
 
         <TextView
@@ -171,10 +171,10 @@
             android:layout_height="24dp"
             android:layout_below="@id/textView15"
             android:layout_marginTop="25dp"
-            android:layout_marginEnd="6dp"
-            android:layout_toStartOf="@id/seekBar5"
+            android:layout_marginRight="6dp"
+            android:layout_toLeftOf="@id/seekBar5"
             android:gravity="center"
-            android:text="@string/quality_of_examples"
+            android:text="Quality of examples"
             android:textSize="9.5sp" />
 
         <TextView
@@ -183,10 +183,10 @@
             android:layout_height="24dp"
             android:layout_below="@id/textView16"
             android:layout_marginTop="23dp"
-            android:layout_marginEnd="7dp"
-            android:layout_toStartOf="@id/seekBar6"
+            android:layout_marginRight="7dp"
+            android:layout_toLeftOf="@id/seekBar6"
             android:gravity="center"
-            android:text="@string/job_opportunities"
+            android:text="Job opportunities"
             android:textSize="9.5sp" />
 
         <TextView
@@ -195,10 +195,10 @@
             android:layout_height="24dp"
             android:layout_below="@id/textView17"
             android:layout_marginTop="24dp"
-            android:layout_marginEnd="7dp"
-            android:layout_toStartOf="@id/seekBar7"
+            android:layout_marginRight="7dp"
+            android:layout_toLeftOf="@id/seekBar7"
             android:gravity="center"
-            android:text="@string/teacher_expertise"
+            android:text="Teacher Expertise"
             android:textSize="9.5sp" />
 
         <TextView
@@ -207,10 +207,10 @@
             android:layout_height="24dp"
             android:layout_below="@id/textView18"
             android:layout_marginTop="22dp"
-            android:layout_marginEnd="16dp"
-            android:layout_toStartOf="@id/seekBar8"
+            android:layout_marginRight="16dp"
+            android:layout_toLeftOf="@id/seekBar8"
             android:gravity="center"
-            android:text="@string/exam_difficulty"
+            android:text="Exam Difficulty"
             android:textSize="9.5sp" />
 
         <TextView

@@ -15,6 +15,15 @@
         android:theme="@style/AppTheme.AppBarOverlay"
         >
 
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/rate"
+            android:textColor="@android:color/white"
+            android:textSize="30sp" />
+
         <android.support.design.widget.CollapsingToolbarLayout
             android:id="@+id/toolbar_layout"
             android:layout_width="match_parent"
@@ -23,15 +32,6 @@
             app:contentScrim="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:toolbarId="@+id/toolbar">
-
-            <TextView
-                android:id="@+id/textView28"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="@string/rate"
-                android:textColor="@android:color/white"
-                android:textSize="30sp" />
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"

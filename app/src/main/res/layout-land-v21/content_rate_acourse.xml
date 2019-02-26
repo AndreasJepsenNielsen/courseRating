@@ -219,8 +219,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/seekBar7"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="6dp"
-            android:text="TextView" />
+            android:layout_marginTop="6dp" />
 
         <TextView
             android:id="@+id/textView21"
@@ -228,8 +227,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/seekBar"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="6dp"
-            android:text="TextView" />
+            android:layout_marginTop="6dp" />
 
         <TextView
             android:id="@+id/textView22"
@@ -237,9 +235,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/seekBar2"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="6dp"
-            android:text="TextView"
-            />
+            android:layout_marginTop="6dp" />
 
         <TextView
             android:id="@+id/textView23"
@@ -247,9 +243,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/seekBar3"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="6dp"
-            android:text="TextView"
-            />
+            android:layout_marginTop="6dp" />
 
         <TextView
             android:id="@+id/textView24"
@@ -257,9 +251,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/seekBar4"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="6dp"
-            android:text="TextView"
-            />
+            android:layout_marginTop="6dp" />
 
         <TextView
             android:id="@+id/textView25"
@@ -267,9 +259,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/seekBar5"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="6dp"
-            android:text="TextView"
-            />
+            android:layout_marginTop="6dp" />
 
         <TextView
             android:id="@+id/textView26"
@@ -277,9 +267,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/seekBar6"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="6dp"
-            android:text="TextView"
-            />
+            android:layout_marginTop="6dp" />
 
         <TextView
             android:id="@+id/textView27"
@@ -288,6 +276,6 @@
             android:layout_below="@id/seekBar8"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="55dp"
-            android:text="Total: 1" />
+            android:text="@string/total_1" />
     </RelativeLayout>
 </android.support.v4.widget.NestedScrollView>
