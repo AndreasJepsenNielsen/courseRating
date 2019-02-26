@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class showSelectedCourseActivity extends AppCompatActivity {
 
@@ -150,8 +151,9 @@ public class showSelectedCourseActivity extends AppCompatActivity {
 
     @Override
     protected void onRestoreInstanceState(final Bundle savedInstanceState) {
-        textView.setText(savedInstanceState.get("name").toString());
-        textView1.setText(savedInstanceState.get("rating").toString());
+
+        textView.setText(Objects.requireNonNull(savedInstanceState.get("name")).toString());
+        textView1.setText(Objects.requireNonNull(savedInstanceState.get("rating")).toString());
 
 
         getSharedPreferences();

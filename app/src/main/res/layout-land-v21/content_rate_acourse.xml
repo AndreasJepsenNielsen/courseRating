@@ -30,8 +30,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="188dp"
             android:onClick="rateCourse"
-            android:text="@string/rate"
-            />
+            android:text="@string/rate" />
 
         <TextView
             android:id="@+id/textView9"
@@ -49,84 +48,84 @@
             android:layout_toStartOf="@id/seekBar"
             android:gravity="center"
             android:text="@string/subject_relevance"
-            android:textSize="9.5sp" />
+            android:textSize="12sp" />
 
         <SeekBar
             android:id="@+id/seekBar2"
             style="@android:style/Widget.Material.SeekBar"
             android:layout_width="240dp"
             android:layout_height="wrap_content"
+            android:layout_below="@id/seekBar"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
             android:max="100"
-            android:progress="1"
-            android:layout_below="@id/seekBar"/>
+            android:progress="1" />
 
         <SeekBar
             android:id="@+id/seekBar3"
             style="@android:style/Widget.Material.SeekBar"
             android:layout_width="240dp"
             android:layout_height="wrap_content"
+            android:layout_below="@id/seekBar2"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
             android:max="100"
-            android:progress="1"
-            android:layout_below="@id/seekBar2"/>
+            android:progress="1" />
 
         <SeekBar
             android:id="@+id/seekBar4"
             style="@android:style/Widget.Material.SeekBar"
             android:layout_width="240dp"
             android:layout_height="wrap_content"
+            android:layout_below="@id/seekBar3"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
             android:max="100"
-            android:progress="1"
-            android:layout_below="@id/seekBar3"/>
+            android:progress="1" />
 
         <SeekBar
             android:id="@+id/seekBar5"
             style="@android:style/Widget.Material.SeekBar"
             android:layout_width="240dp"
             android:layout_height="wrap_content"
+            android:layout_below="@id/seekBar4"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
             android:max="100"
-            android:progress="1"
-            android:layout_below="@id/seekBar4"/>
+            android:progress="1" />
 
         <SeekBar
             android:id="@+id/seekBar6"
             style="@android:style/Widget.Material.SeekBar"
             android:layout_width="240dp"
             android:layout_height="wrap_content"
+            android:layout_below="@id/seekBar5"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
             android:max="100"
-            android:progress="1"
-            android:layout_below="@id/seekBar5"/>
+            android:progress="1" />
 
         <SeekBar
             android:id="@+id/seekBar7"
             style="@android:style/Widget.Material.SeekBar"
             android:layout_width="240dp"
             android:layout_height="wrap_content"
+            android:layout_below="@id/seekBar6"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
             android:max="100"
-            android:progress="1"
-            android:layout_below="@id/seekBar6"/>
+            android:progress="1" />
 
         <SeekBar
             android:id="@+id/seekBar8"
             style="@android:style/Widget.Material.SeekBar"
             android:layout_width="240dp"
             android:layout_height="wrap_content"
+            android:layout_below="@id/seekBar7"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
             android:max="100"
-            android:progress="1"
-            android:layout_below="@id/seekBar7"/>
+            android:progress="1" />
 
         <TextView
             android:id="@+id/textView11"
@@ -139,7 +138,7 @@
             android:layout_toStartOf="@id/seekBar2"
             android:gravity="center"
             android:text="@string/teacher_overall_performance"
-            android:textSize="9.5sp" />
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/textView12"
@@ -151,7 +150,7 @@
             android:layout_toStartOf="@id/seekBar3"
             android:gravity="center"
             android:text="@string/teacher_preperation"
-            android:textSize="9.5sp" />
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/textView15"
@@ -163,7 +162,7 @@
             android:layout_toStartOf="@id/seekBar4"
             android:gravity="center"
             android:text="@string/amount_of_feedback"
-            android:textSize="9.5sp" />
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/textView16"
@@ -175,7 +174,7 @@
             android:layout_toStartOf="@id/seekBar5"
             android:gravity="center"
             android:text="@string/quality_of_examples"
-            android:textSize="9.5sp" />
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/textView17"
@@ -187,7 +186,7 @@
             android:layout_toStartOf="@id/seekBar6"
             android:gravity="center"
             android:text="@string/job_opportunities"
-            android:textSize="9.5sp" />
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/textView18"
@@ -199,7 +198,7 @@
             android:layout_toStartOf="@id/seekBar7"
             android:gravity="center"
             android:text="@string/teacher_expertise"
-            android:textSize="9.5sp" />
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/textView19"
@@ -211,7 +210,7 @@
             android:layout_toStartOf="@id/seekBar8"
             android:gravity="center"
             android:text="@string/exam_difficulty"
-            android:textSize="9.5sp" />
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/textView20"
