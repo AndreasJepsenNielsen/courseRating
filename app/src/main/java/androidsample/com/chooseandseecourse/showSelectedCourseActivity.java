@@ -179,6 +179,7 @@ public class showSelectedCourseActivity extends AppCompatActivity {
             if(data.hasExtra("Rating")){
                 textView1 = (TextView)findViewById(R.id.textView14);
                 String rating = data.getExtras().getString("Rating");
+                String name = data.getExtras().getString("Name");
 
 
 
@@ -186,7 +187,7 @@ public class showSelectedCourseActivity extends AppCompatActivity {
                 textView1.setText(CalculateScore(rating));
 
                 for (int i = 0; i < courses.size() ; i++) {
-                    if(courses.get(i).getName().equals(COURSENAME)){
+                    if(courses.get(i).getName().equals(name)){
                         courses.get(i).setRating(CalculateScore(rating));
                     }
                 }
@@ -204,7 +205,7 @@ public class showSelectedCourseActivity extends AppCompatActivity {
         int rateInt = Integer.parseInt(rating) / 8;
         String ratingToReturn = "";
 
-        if(rateInt < 50){
+        if(rateInt <= 50){
             ratingToReturn = "F";
         }else if(rateInt > 50 && rateInt < 60){
             ratingToReturn = "E";

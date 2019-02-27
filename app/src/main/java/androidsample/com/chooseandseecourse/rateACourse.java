@@ -38,7 +38,7 @@ public class rateACourse extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        courseName = intent.getStringExtra(showSelectedCourseActivity.COURSENAME);
+        courseName = intent.getStringExtra("name");
 
 
 
