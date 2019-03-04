@@ -168,7 +168,14 @@ public class showSelectedCourseActivity extends AppCompatActivity {
 
     public void RateThisCourse(View v){
         Intent intent = new Intent(showSelectedCourseActivity.this.getApplicationContext(), rateACourse.class);
-        intent.putExtra("name", COURSENAME);
+        Course currentCourse = new Course(20,"","");
+        for (int i = 0; i < courses.size(); i++) {
+            if (courses.get(i).getName().equals(COURSENAME)) {
+
+                currentCourse = courses.get(i);
+            }
+        }
+        intent.putExtra("current", currentCourse);
 
         startActivityForResult(intent, 2404);
     }

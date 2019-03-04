@@ -331,5 +331,13 @@
             android:text="@string/exam_difficulty"
             android:textSize="12sp" />
 
+        <TextView
+            android:id="@+id/textView30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView27"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp" />
+
     </RelativeLayout>
 </android.support.v4.widget.NestedScrollView>

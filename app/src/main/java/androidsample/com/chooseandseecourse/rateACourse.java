@@ -37,8 +37,16 @@ public class rateACourse extends AppCompatActivity {
 
 
         Intent intent = getIntent();
+        Bundle data = intent.getExtras();
+        Course course = (Course) data.getParcelable("current");
+
 
         courseName = intent.getStringExtra("name");
+
+        TextView courseName = findViewById(R.id.textView30);
+
+        courseName.setText("Course: " + course.getName());
+
 
 
 
