@@ -1,6 +1,7 @@
 package androidsample.com.chooseandseecourse;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -10,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class rateACourse extends AppCompatActivity {
     TextView seekBar1Progress;
@@ -283,6 +285,7 @@ public class rateACourse extends AppCompatActivity {
         data.putExtra("Name", courseName);
 
         setResult(RESULT_OK,data);
+        sendEmail();
         finish();
     }
 
@@ -334,5 +337,26 @@ public class rateACourse extends AppCompatActivity {
         super.onRestart();
         Log.d(TAG,"onRestart() called");
 
+    }
+
+    public void sendEmail() {
+        String[] TO = {"andr921c@stud.kea.dk"};
+        String[] CC = {""};
+        Intent emailIntent = new Intent(Intent.ACTION_SEND);
+
+        emailIntent.setData(Uri.parse("mailto:"));
+        emailIntent.setType("text/plain");
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
+        emailIntent.putExtra(Intent.EXTRA_CC, CC);
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "I rated your course: ");
+        emailIntent.putExtra(Intent.EXTRA_TEXT, "Your course was rated!");
+
+        try {
+            startActivity(Intent.createChooser(emailIntent, "Send mail..."));
+            Log.i(TAG,"Mail send");
+            finish();
+        }catch (android.content.ActivityNotFoundException ex) {
+            Toast.makeText(this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
+        }
     }
 }
