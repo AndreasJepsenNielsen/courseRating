@@ -25,6 +25,7 @@ public class rateACourse extends AppCompatActivity {
     TextView courseName;
     Course course;
 
+
     static final String TAG = "RATEACOURSE";
 
 
@@ -267,10 +268,7 @@ public class rateACourse extends AppCompatActivity {
 
 
     public void setTotal(){
-        int rating = (Integer.parseInt(seekBar1Progress.getText().toString()) + Integer.parseInt(seekBar2Progress.getText().toString()) +
-                Integer.parseInt(seekBar3Progress.getText().toString()) +Integer.parseInt(seekBar4Progress.getText().toString()) +
-                Integer.parseInt(seekBar5Progress.getText().toString()) +Integer.parseInt(seekBar6Progress.getText().toString()) +
-                Integer.parseInt(seekBar7Progress.getText().toString()) +Integer.parseInt(seekBar8Progress.getText().toString())) / 8;
+        int rating = getRating();
 
         TextView total = (TextView)findViewById(R.id.textView27);
 
@@ -343,8 +341,23 @@ public class rateACourse extends AppCompatActivity {
 
     }
 
+    public int getRating(){
+       return (Integer.parseInt(seekBar1Progress.getText().toString()) + Integer.parseInt(seekBar2Progress.getText().toString()) +
+                Integer.parseInt(seekBar3Progress.getText().toString()) +Integer.parseInt(seekBar4Progress.getText().toString()) +
+                Integer.parseInt(seekBar5Progress.getText().toString()) +Integer.parseInt(seekBar6Progress.getText().toString()) +
+                Integer.parseInt(seekBar7Progress.getText().toString()) +Integer.parseInt(seekBar8Progress.getText().toString())) / 8;
+    }
+
 
     public void sendEmail() {
+
+
+
+
+
+
+
+
         String[] TO = {"andr921c@stud.kea.dk"};
         String[] CC = {""};
         Intent emailIntent = new Intent(Intent.ACTION_SEND);
@@ -362,7 +375,8 @@ public class rateACourse extends AppCompatActivity {
                 + "\nQuality Of Examples; " + seekBar5Progress.getText().toString()
                 + "\nJob Opportunities: " + seekBar6Progress.getText().toString()
                 + "\nTeacher Expertise: " + seekBar7Progress.getText().toString()
-                + "\nExam Difficulty: " + seekBar8Progress.getText().toString());
+                + "\nExam Difficulty: " + seekBar8Progress.getText().toString()
+                +"\n\n Total score of: " + Integer.toString(getRating()));
 
         try {
             startActivity(Intent.createChooser(emailIntent, "Send mail..."));
