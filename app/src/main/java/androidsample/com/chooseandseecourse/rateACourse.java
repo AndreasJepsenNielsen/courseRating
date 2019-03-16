@@ -22,11 +22,13 @@ public class rateACourse extends AppCompatActivity {
     TextView seekBar6Progress;
     TextView seekBar7Progress;
     TextView seekBar8Progress;
+    TextView courseName;
+    Course course;
 
     static final String TAG = "RATEACOURSE";
 
 
-    String courseName = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,15 +42,17 @@ public class rateACourse extends AppCompatActivity {
 
         Intent intent = getIntent();
         Bundle data = intent.getExtras();
-        Course course = (Course) data.getParcelable("current");
+        course = (Course) data.getParcelable("current");
 
 
-        courseName = intent.getStringExtra("name");
 
-        TextView courseName = findViewById(R.id.textView30);
 
-        courseName.setText("Course: " + course.getName());
+        courseName = findViewById(R.id.textView30);
+        try {
+            courseName.setText("Course: " + course.getName());
+        }catch (RuntimeException RTE){
 
+        }
 
 
 
@@ -282,7 +286,7 @@ public class rateACourse extends AppCompatActivity {
                 Integer.parseInt(seekBar7Progress.getText().toString()) +Integer.parseInt(seekBar8Progress.getText().toString());
 
         data.putExtra("Rating",Integer.toString(rating));
-        data.putExtra("Name", courseName);
+        data.putExtra("Name", courseName.getText().toString());
 
         setResult(RESULT_OK,data);
         sendEmail();
@@ -339,6 +343,7 @@ public class rateACourse extends AppCompatActivity {
 
     }
 
+
     public void sendEmail() {
         String[] TO = {"andr921c@stud.kea.dk"};
         String[] CC = {""};
@@ -348,8 +353,16 @@ public class rateACourse extends AppCompatActivity {
         emailIntent.setType("text/plain");
         emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
         emailIntent.putExtra(Intent.EXTRA_CC, CC);
-        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "I rated your course: ");
-        emailIntent.putExtra(Intent.EXTRA_TEXT, "Your course was rated!");
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "I rated your course");
+        emailIntent.putExtra(Intent.EXTRA_TEXT, "Your course was given a rating of: "
+                + "\nSubject Relevance: " + seekBar1Progress.getText().toString()
+                + "\nTeacher Overall Perfomance: " + seekBar2Progress.getText().toString()
+                + "\nTeacher Preparation: " + seekBar3Progress.getText().toString()
+                + "\nAmount Of Feedback: "+ seekBar4Progress.getText().toString()
+                + "\nQuality Of Examples; " + seekBar5Progress.getText().toString()
+                + "\nJob Opportunities: " + seekBar6Progress.getText().toString()
+                + "\nTeacher Expertise: " + seekBar7Progress.getText().toString()
+                + "\nExam Difficulty: " + seekBar8Progress.getText().toString());
 
         try {
             startActivity(Intent.createChooser(emailIntent, "Send mail..."));
