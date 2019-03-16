@@ -37,7 +37,6 @@ public class rateACourse extends AppCompatActivity {
         Log.d(TAG,"onCreate() called");
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(null);
 
 
@@ -49,11 +48,9 @@ public class rateACourse extends AppCompatActivity {
 
 
         courseName = findViewById(R.id.textView30);
-        try {
-            courseName.setText("Course: " + course.getName());
-        }catch (RuntimeException RTE){
 
-        }
+            courseName.setText("Course: " + course.getName());
+
 
 
 
@@ -98,6 +95,7 @@ public class rateACourse extends AppCompatActivity {
         seekBar8Progress.setText(getResources().getString(R.string.fifty));
 
     }
+
 
     SeekBar.OnSeekBarChangeListener seekBar1ChangeListener = new SeekBar.OnSeekBarChangeListener() {
         @Override
@@ -308,7 +306,11 @@ public class rateACourse extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
+        Intent data = new Intent();
 
+        data.putExtra("Name", courseName.getText().toString());
+
+        setResult(RESULT_OK,data);
         super.onDestroy();
         Log.d(TAG,"onDestroy() called");
 

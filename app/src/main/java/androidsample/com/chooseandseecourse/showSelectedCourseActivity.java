@@ -29,7 +29,6 @@ public class showSelectedCourseActivity extends AppCompatActivity {
         setContentView(R.layout.activity_show_selected_course);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(null);
 
 
